@@ -2,7 +2,7 @@
 // CONFIGURAZIONE
 // ==========================================================
 // !! IMPORTANTE !! Sostituisci questa stringa con l'URL della tua Web App
-const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbxA9fe5pfhLLrAIaV3Ai8gMP6apBO6ol2HLK0fCRVQuIDwHlAxs-lU9mHa1-e-hZQbfmQ/exec'; // <-- SOSTITUISCI QUESTO
+const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbzs9hB2pfX_W8JLI8M9kEIv74a2-PEo-FGouljA6kRJ_-hrEqrvs4MjN8vc_oQZa1ONsg/exec'; // <-- SOSTITUISCI QUESTO
 
 const DB_NAME = 'RagusaOrdiniDB';
 const DB_VERSION = 1;
@@ -735,6 +735,7 @@ function hideLoading() {
     btn.querySelector('#buttonText').style.display = 'inline-block';
     btn.querySelector('#loadingSpinner').style.display = 'none';
 }
+
 
 
 
