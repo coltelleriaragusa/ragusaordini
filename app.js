@@ -2,7 +2,7 @@
 // CONFIGURAZIONE
 // ==========================================================
 // !! IMPORTANTE !! Sostituisci questa stringa con l'URL della tua Web App
-const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbweqWh3GHWD18Jtc-Ew4g0PVS11HiPklwUVW0rZRDEBwGTab2O9OhZBNsgkqQ9nmQ3W/exec'; // <-- SOSTITUISCI QUESTO
+const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbzkIYsPIY-F3mWKbprAlpf8W0ONCzlhxh2g9_ChiR60GUGcY_HfT-fvAC_Glp_L6zOS/exec'; // <-- SOSTITUISCI QUESTO
 
 const DB_NAME = 'RagusaOrdiniDB';
 const DB_VERSION = 1;
@@ -444,7 +444,22 @@ function generateContractHtml(data) {
 <tr>
 <td class="border p-2 text-left uppercase">Acciaini <input type ="text" id="acciaini_1" name="acciaini_1" class="contratto-input w-32"></td>
 <td class="border p-2">€ <input type="text" id="contratto_canone_acciai" name="contratto_canone_acciai" class="contratto-input w-20 mx-1"> + IVA</td>
-<td class="border p-2 uppercase">Su richiesta <input type ="text" id="richiesta_1" name="richiesta_1" class="contratto-input w-20 mx-1"></td></tr><tr>
+<td class="border p-2 uppercase">Su richiesta <input type ="text" id="richiesta_1" name="richiesta_1" class="contratto-input w-20 mx-1"></td></tr>
+
+<tr>
+<td class="border p-2 text-left uppercase">Copriceppi</td>
+<td class="border p-2">€ <input type="text" id="contratto_canone_copriceppi_1" name="contratto_canone_copriceppi_1" class="contratto-input w-20 mx-1"> + IVA</td>
+<td class="border p-2 uppercase">Trimestrale</td></tr>
+<tr>
+<td class="border p-2 text-left uppercase">Taglieri</td>
+<td class="border p-2">€ <input type="text" id="contratto_canone_taglieri_1" name="contratto_canone_taglieri_1" class="contratto-input w-20 mx-1"> + IVA</td>
+<td class="border p-2 uppercase">Trimestrale</td></tr>
+<tr>
+<td class="border p-2 text-left uppercase">Tappeti</td>
+<td class="border p-2">€ <input type="text" id="contratto_canone_tappeti_1" name="contratto_canone_tappeti_1" class="contratto-input w-20 mx-1"> + IVA</td>
+<td class="border p-2 uppercase">Mensile</td></tr>
+
+<tr>
 <td class="border p-2 text-left uppercase"> <input type ="text" id="linea_coltelleria_3" name="linea_coltelleria_3" class="contratto-input w-full"></td>
 <td class="border p-2">€ <input type="text" id="contratto_canone_coltelleria_3" name="contratto_canone_coltelleria_3" class="contratto-input w-20 mx-1"> + IVA </td>
 <td class="border p-2 uppercase">Su richiesta <input type ="text" id="richiesta_2" name="richiesta_2" class="contratto-input w-20 mx-1"></td></tr>
@@ -701,6 +716,9 @@ async function handleFormSubmit(e) {
             canoneColtelleria1: document.getElementById('contratto_canone_coltelleria_1').value,
             canoneColtelleria2: document.getElementById('contratto_canone_coltelleria_2').value,
             canoneAcciai: document.getElementById('contratto_canone_acciai').value,
+            canoneCopriceppo1: document.getElementById('contratto_canone_copriceppi_1').value,
+            canoneTaglieri1: document.getElementById('contratto_canone_taglieri_1').value,
+            canoneTappeti1: document.getElementById('contratto_canone_tappeti_1').value,
             versatoMediante: document.getElementById('contratto_versato_mediante').value,
             cadenzaPiallatura: document.getElementById('contratto_cadenza_piallatura').value,
             prezzoPiallatura: document.getElementById('contratto_prezzo_piallatura').value,
@@ -765,6 +783,7 @@ function hideLoading() {
     btn.querySelector('#buttonText').style.display = 'inline-block';
     btn.querySelector('#loadingSpinner').style.display = 'none';
 }
+
 
 
 
